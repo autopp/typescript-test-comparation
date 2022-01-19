@@ -1,12 +1,7 @@
 import type { AxiosInstance } from 'axios'
 import { Product } from './product'
 
-export interface Client {
-  search(query: string): Promise<Product[]>
-  create(name: string, price: number): Promise<void>
-}
-
-export class ClientImpl implements Client {
+export class Client {
   private readonly axios: AxiosInstance
 
   constructor(axios: AxiosInstance) {
