@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "ts-node src/server.ts",
     "test": "jest"
   },
   "author": "autopp",
