@@ -4,7 +4,7 @@ import { Product } from '@/product'
 const app = express()
 app.use(express.json())
 
-type SearchResBody = {
+export type SearchResBody = {
   products: Product[]
 }
 
@@ -21,7 +21,7 @@ app.get(
   }
 )
 
-type ProductReqBody = Product
+export type ProductReqBody = Product
 app.post('/products', (req: Request<unknown, unknown, ProductReqBody>, res: Response) => {
   console.log(req.body)
   res.status(204).end()
